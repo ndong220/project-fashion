@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="homedd.css">
+    <title>Đăng ký</title>
+    <script src="jquery.js"></script>
+    <script src="html5.js"></script>
+</head>
+<body>
+    <header id="p_header" class="row">
+	<div class="col-4" style="background-color: white;">
+		<img src="img/flatshop.png" style="width: 430px;height: 120px;">
+	</div>
+	<div class="col-8" style="background-color: white">
+        <div class="search" style="margin-left:-13%;">
+	<input type="search" name="" id="txtsearch" placeholder="Bạn muốn tìm...." style="height: 5%">
+	<button type="submit"><i class="fa fa-search"></i> Tìm kiếm</button>
+	
+		<select id="box" class="select" style="height:5%;">
+                      <option value="hn" selected="selected">Hà Nội</option>
+                      <option value="hcm">Hồ Chí Minh</option>
+                      <option value="ag">An Giang</option>
+                      <option value="dn">Đà Nẵng</option>
+                      <option value="ct">Cần Thơ</option>
+                      <option value="tn">Thái Nguyên</option>
+                      <option value="hd">Hải Dương</option>
+                      <option value="hp">Hải Phòng</option>
+                      <option value="kg">Kiên Giang</option>
+                    </select>             
+	
+		<a href="#" title="19008198"><i class="fas fa-phone" style="margin-left:25px;">  Chăm sóc khách hàng</i></a>
+                
+                <a href="#" title=""><i class="fab fa-facebook-square" style="margin-left: 25px; margin-top: 30px">Fanpage</i></a>
+                
+</div>
+<div id="div1"><a href="dangky.html">Đăng Ký</a></div>
+<div id="div2"><a href="dangnhap.html">Đăng Nhập</a></div>
+<div id="div3"><a href="/admin quantri/admin.html"><i class="fas fa-user"></i>Admin</a></div>
+</div>
+    </header>
+    <nav id="p_menu" class="row">
+	<div class="col-12" style="height: 60px">
+		<ul>
+		 	<li><a href="Homedd.html">Trang Chủ</a>
+		 	</li>
+		 	<li><a href="#">Thời Trang Nam</a>
+		 	<ul class="submenu">
+            	<li><a href="Aophong.html">Áo Phông</a></li>
+            	<li><a href="#">Áo Sơ Mi</a></li>
+            	<li><a href="#">Quần</a></li>
+            </ul></li>
+		 	<li><a href="#"> Thời Trang nữ</a>
+		 	<ul class="submenu">
+                <li><a href="Dannu.html">Đầm</a></li>
+            	<li><a href="#">Áo</a></li>
+            	<li><a href="#">Váy</a></li>
+            </ul></li>
+		 	<li><a href="phukien.html"> Phụ kiện</a>
+		 	<ul class="submenu">
+            	<li><a href="#">Dây Lưng</a></li>
+            	<li><a href="#">Ví</a></li>
+            	<li><a href="#">Túi Sách</a></li>
+            </ul></li>
+		 	<li><a href="#">Giới Thiệu</a>
+		 	<ul class="submenu">
+            	<li><a href="#">Về Chúng Tôi</a></li>
+            </ul></li>
+            <li><a href="#">Liên Hệ</a>
+                <ul class="submenu">
+                   <li><a href="#">Mua Hàng</a></li>
+                   <li><a href="#">Quảng Cáo</a></li>
+               </ul></li>
+
+		 </ul>
+	</div>
+</nav>
+<nav id="phieumua" class="row">
+    <div class="col-12" style="margin-top: 178px;">
+        <form id="myform">
+    <div class="formmua">
+    <h2>Giỏ Hàng của bạn</h2>
+<table>
+    <ul>
+        <tr><div style="height:25%;width:25%; text-align:left;
+        background-color: #ebebe0;margin-top: 2%;"><a style="margin-left: 50px;"> Tên sản phẩm</a></div>    
+        </tr>
+         <tr><div style="height:10%;width:25%; text-align:left;
+        background-color:#ebebe0;margin-top:2%;"><a style="margin-left: 50px;">Size</a></div>
+                 
+        </tr>
+         <tr><div style="height:10%;width:25%; text-align:left;
+        background-color:#ebebe0;margin-top: 2%;"><a style="margin-left: 50px;">Giá bán</a></div>
+                 
+        </tr>
+         <tr><div style="height:10%;width:25%; text-align:left;
+        background-color: #ebebe0;margin-top: 2%;"><a style="margin-left: 50px;">Số lượng</a></div>
+                 
+        </tr>
+        <tr><div style="height:10%;width:25%; text-align:left;
+        background-color: #ebebe0;margin-top:2%;"><a style="margin-left: 50px;">Tổng tiền</a></div>            
+        </tr>
+    </ul>
+    <ul>
+    <button onclick="hide()" style="float: right;height: 30px;width: 30px;margin-top:-33%"><i class="fas fa-times-circle"></i></button>
+    </ul>
+    
+</table>
+     </div>
+</form>
+    </div>
+</nav>
+<script type="text/javascript"> function giohang_click(){
+        
+        if (document.getElementById('myform').style.display==="block") {
+            document.getElementById('myform').style.display="none";
+      
+        }else{
+            document.getElementById('myform').style.display="block";
+           
+        }
+    }
+        function show(){
+            var ht=document.getElementById('ht').value;
+            var dc=document.getElementById('dc').value;
+            var sdt=document.getElementById('sdt').value;
+            var email=document.getElementById('email').value;
+            
+
+            if (ht===""||dc===""||sdt===""||email===""||isNaN(sdt)) 
+            {
+                alert("Bạn nhập thông tin chưa chính xác!");
+            }
+            else
+            alert("bạn đã đặt hàng thành công")
+            
+        } 
+        function hide(){
+            document.getElementById("myform").style.display="none";
+        }
+</script>
+<!---End Menu--->
+<!----sile----->
+<aside id="p_slide" class="row">
+	<div class="col-7">
+		<div class="slide active"><img src="img/bannerslide.png"></div>
+		<div class="slide"><img src="img/banner-thoi-trang-dang-cap.jpg"></div>
+		<div class="slide"><img src="img/banner-thoi-trang-nam-don-gian.jpg"></div>
+	</div>
+	<div class="col-5">
+		<ul><img src="img/bannermuahe.jfif" style="margin-top:-30px;margin-left: -50px;"></ul>
+		<ul><h3>TIN THỜI TRANG</h3>
+         <a href="#" style="margin-top:-25px;"> •••   "Biến hóa" thành cô nàng phá cách cùng trang phục Jeans</a><br>
+         <a href="#">•••   Điệu đà với đầm xòe cổ yếm hiện đại</a><br>
+         <a href="">•••   Những bài tập nhẹ nhàng cho đầu tuần hứng khởi</a>
+		</ul>
+		</div>
+</aside>
+<form action="dangky.html" method="POST">
+    <table width="700" border="2" cellpadding="5" align="center">
+        <tr>
+            <th colspan="2" style="font-style: oblique;background-color:orange;">Đăng Ký</th>
+        </tr>
+        <tr>
+            <td>Họ Và Tên</td>
+            <td>
+                <input type="text" name="fname" size="30" placeholder="Nhập tên">
+            </td>
+        </tr>
+        <tr>
+            <td>Tên Đăng Nhập</td>
+            <td>
+                <input type="text" name="user" size="30" placeholder="Nhập tên">
+            </td>
+        </tr>
+        <tr>
+            <td>Mật Khẩu</td>
+            <td>
+                <input type="password" name="pass" size="30" placeholder="Nhập mật khẩu">
+            </td>
+        </tr>
+        <tr>
+            <td>Nhập lại mật khẩu</td>
+            <td>
+                <input type="password" name="repass" size="30" placeholder="Nhập lại mật khẩu">
+            </td>
+        </tr>
+        <tr>
+            <td>Giới tính</td>
+            <td>
+                <label>
+                <input type="radio" name="gioitinh" id="nam" >Nam
+                </label>
+                <label>
+                    <input type="radio" name="gioitinh" id="nam" >Nữ
+                    </label>
+            </td>
+        </tr>
+        <tr>
+            <td>Ngày Sinh</td>
+            <td>
+                <select name="day">
+                    <option value="ngay1">Ngày 1</option>
+                    <option value="ngay2">Ngày 2</option>
+                    <option value="ngay3">Ngày 3</option>
+                    <option value="ngay4">Ngày 4</option>
+                    <option value="ngay5">Ngày 5</option>
+                    <option value="ngay6">Ngày 6</option>
+                    <option value="ngay7">Ngày 7</option>
+                    <option value="ngay8">Ngày 8</option>
+                    <option value="ngay9">Ngày 9</option>
+                    <option value="ngay10">Ngày 10</option>
+                    <option value="ngay11">Ngày 11</option>
+                    <option value="ngay12">Ngày 12</option>
+                    <option value="ngay13">Ngày 13</option>
+                    <option value="ngay14">Ngày 14</option>
+                    <option value="ngay15">Ngày 15</option>
+                    <option value="ngay16">Ngày 16</option>
+                    <option value="ngay17">Ngày 17</option>
+                    <option value="ngay18">Ngày 18</option>
+                    <option value="ngay19">Ngày 19</option>
+                    <option value="ngay20">Ngày 20</option>
+                    <option value="ngay21">Ngày 21</option>
+                    <option value="ngay22">Ngày 22</option>
+                    <option value="ngay23">Ngày 23</option>
+                    <option value="ngay24">Ngày 24</option>
+                    <option value="ngay25">Ngày 25</option>
+                    <option value="ngay26">Ngày 26</option>
+                    <option value="ngay27">Ngày 27</option>
+                    <option value="ngay28">Ngày 28</option>
+                    <option value="ngay29">Ngày 29</option>
+                    <option value="ngay30">Ngày 30</option>
+                    <option value="ngay31">Ngày 31</option>
+                </select>
+                <select name="month">
+                    <option value="thang1">Tháng 1</option>
+                    <option value="thang2">Tháng 2</option>
+                    <option value="thang3">Tháng 3</option>
+                    <option value="thang4">Tháng 4</option>
+                    <option value="thang5">Tháng 5</option>
+                    <option value="thang6">Tháng 6</option>
+                    <option value="thang7">Tháng 7</option>
+                    <option value="thang8">Tháng 8</option>
+                    <option value="thang9">Tháng 9</option>
+                    <option value="thang10">Tháng 10</option>
+                    <option value="thang11">Tháng 11</option>
+                    <option value="thang12">Tháng 12</option>
+                </select>
+                <select name="year">
+                    <option value="nam2000">Năm 2000</option>
+                    <option value="nam2001">Năm 2001</option>
+                    <option value="nam2002">Năm 2002</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Địa chỉ</td>
+            <td>
+                <textarea col="20"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>Ảnh Đại Diện</td>
+            <td>
+                <input type="file" name="avarta">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="reset" name="reset" value="Reset"> &nbsp;&nbsp;
+                <input type="submit" name="oke" value="Đăng Ký">
+            </td>
+        </tr>
+
+    </table> 
+    
+</form>
+<footer id="footer1" class="row"> 
+    <div class="col-12" style="background-color:violet">        
+     <ul>
+<a href="#" title="" style="font-family:fantasy;font-size: 15pt;"><i class="fab fa-battle-net" ></i>Hỏi đáp</a><br>
+<a href="#">Giới thiệu công ty(DĐG)</a><br>
+<a href="#">Hệ thống cửa hàng</a><br>
+<a href="#">Tuyển dụng</a><br>
+<a href="#">Chính sách bảo mật</a>
+</ul>
+<ul>
+
+<a href="#" title="" style="font-family:fantasy;font-size: 15pt;"><i class="fas fa-box-open" style=""></i>Đổi trả hàng</a><br>
+<a href="#">Chính sách bảo hành</a><br>
+<a href="#">Chính sách đổi trả sản phẩm</a><br>
+<a href="#">Hỏi đáp mua hàng online</a><br>
+<a href="#">Phương thức thanh toán</a>
+</ul>
+<ul>
+<a href="#" title="" style="font-family:fantasy;font-size: 15pt;"><i class="fas fa-truck-moving" style=""></i> Giao hàng toàn quốc</a><br>
+<a href="#">Gọi mua hàng miễn phí:1900.98198</a><br>
+<a href="#">Gọi bảo hành và khiếu nại:1800.7652</a><br>
+<a href="#">Gọi hợp tác kinh doanh:1800.3003</a>
+</ul>
+<div class="footer_text"><p>© 2017 - CÔNG TY CỔ PHẦN THỜI TRANG FLAT - VPGD: 37 Trung Kính - Trung Hòa - Cầu Giấy - Hà Nội<br>
+Điện thoại: (024) 2 0219 555 - Hotline: 0973 285 886<br>
+Email: FLATboutique.vn@gmail.com - Nơi cấp: Sở kế hoạch và đầu tư thành phố Hà Nội</p></div>
+    </div>        
+</div>
+</footer>
+
+<script src="html5.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="homedd.css">
+    <title>Phụ Kiện</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <header id="p_header" class="row">
+	<div class="col-4" style="background-color: white;">
+		<img src="img/flatshop.png" style="width: 430px;height: 120px;">
+	</div>
+	<div class="col-8" style="background-color: white">
+        <div class="search" style="margin-left:-13%;">
+	<input type="search" name="" id="txtsearch" placeholder="Bạn muốn tìm...." style="height: 5%">
+	<button type="submit"><i class="fa fa-search"></i> Tìm kiếm</button>
+	
+		<select id="box" class="select" style="height:5%;">
+                      <option value="hn" selected="selected">Hà Nội</option>
+                      <option value="hcm">Hồ Chí Minh</option>
+                      <option value="ag">An Giang</option>
+                      <option value="dn">Đà Nẵng</option>
+                      <option value="ct">Cần Thơ</option>
+                      <option value="tn">Thái Nguyên</option>
+                      <option value="hd">Hải Dương</option>
+                      <option value="hp">Hải Phòng</option>
+                      <option value="kg">Kiên Giang</option>
+                    </select>             
+	
+		<a href="#" title="19008198"><i class="fas fa-phone" style="margin-left:25px;">  Chăm sóc khách hàng</i></a>
+                
+                <a href="#" title=""><i class="fab fa-facebook-square" style="margin-left: 25px; margin-top: 30px">Fanpage</i></a>
+                
+</div>
+<div id="div1"><a href="dangky.html">Đăng Ký</a></div>
+<div id="div2"><a href="dangnhap.html">Đăng Nhập</a></div>
+<div id="div3"><a href="/admin quantri/admin.html"><i class="fas fa-user"></i>Admin</a></div>
+</div>
+    </header>
+    <nav id="p_menu" class="row">
+	<div class="col-12" style="height: 60px">
+		<ul>
+		 	<li><a href="Homedd.html">Trang Chủ</a>
+		 	</li>
+		 	<li><a href="">Thời Trang Nam</a>
+		 	<ul class="submenu">
+            	<li><a href="/Aophong.html">Áo Phông</a></li>
+            	<li><a href="#">Áo Sơ Mi</a></li>
+            	<li><a href="#">Quần</a></li>
+            </ul></li>
+		 	<li><a href="#"> Thời Trang nữ</a>
+		 	<ul class="submenu">
+                <li><a href="/Dannu.html">Đầm</a></li>
+            	<li><a href="#">Áo</a></li>
+            	<li><a href="#">Váy</a></li>
+            </ul></li>
+		 	<li><a href="phukien.html"> Phụ kiện</a>
+		 	<ul class="submenu">
+            	<li><a href="/phukien.html">Dây Da</a></li>
+            	<li><a href="#">Ví</a></li>
+            	<li><a href="#">Túi Sách</a></li>
+            </ul></li>
+		 	<li><a href="#">Giới Thiệu</a>
+		 	<ul class="submenu">
+            	<li><a href="#">Về Chúng Tôi</a></li>
+            </ul></li>
+            <li><a href="#">Liên Hệ</a>
+                <ul class="submenu">
+                   <li><a href="#">Mua Hàng</a></li>
+                   <li><a href="#">Quảng Cáo</a></li>
+               </ul></li>
+
+		 </ul>
+	</div>
+</nav>
+<nav id="phieumua" class="row">
+    <div class="col-12" style="margin-top: 178px;">
+        <form id="myform">
+    <div class="formmua">
+    <h2>Giỏ Hàng của bạn</h2>
+<table>
+    <ul>
+        <tr><div style="height:25%;width:25%; text-align:left;
+        background-color: #ebebe0;margin-top: 2%;"><a style="margin-left: 50px;"> Tên sản phẩm</a></div>    
+        </tr>
+         <tr><div style="height:10%;width:25%; text-align:left;
+        background-color:#ebebe0;margin-top:2%;"><a style="margin-left: 50px;">Size</a></div>
+                 
+        </tr>
+         <tr><div style="height:10%;width:25%; text-align:left;
+        background-color:#ebebe0;margin-top: 2%;"><a style="margin-left: 50px;">Giá bán</a></div>
+                 
+        </tr>
+         <tr><div style="height:10%;width:25%; text-align:left;
+        background-color: #ebebe0;margin-top: 2%;"><a style="margin-left: 50px;">Số lượng</a></div>
+                 
+        </tr>
+        <tr><div style="height:10%;width:25%; text-align:left;
+        background-color: #ebebe0;margin-top:2%;"><a style="margin-left: 50px;">Tổng tiền</a></div>            
+        </tr>
+    </ul>
+    <ul>
+    <button onclick="hide()" style="float: right;height: 30px;width: 30px;margin-top:-33%"><i class="fas fa-times-circle"></i></button>
+    </ul>
+    
+</table>
+     </div>
+</form>
+    </div>
+</nav>
+<script type="text/javascript"> function giohang_click(){
+        
+        if (document.getElementById('myform').style.display==="block") {
+            document.getElementById('myform').style.display="none";
+      
+        }else{
+            document.getElementById('myform').style.display="block";
+           
+        }
+    }
+        function show(){
+            var ht=document.getElementById('ht').value;
+            var dc=document.getElementById('dc').value;
+            var sdt=document.getElementById('sdt').value;
+            var email=document.getElementById('email').value;
+            
+
+            if (ht===""||dc===""||sdt===""||email===""||isNaN(sdt)) 
+            {
+                alert("Bạn nhập thông tin chưa chính xác!");
+            }
+            else
+            alert("bạn đã đặt hàng thành công")
+            
+        } 
+        function hide(){
+            document.getElementById("myform").style.display="none";
+        }
+</script>
+<!---End Menu--->
+<!----sile----->
+<aside id="p_slide" class="row">
+	<div class="col-7">
+		<div class="slide active"><img src="img/bannerslide.png"></div>
+		<div class="slide"><img src="img/banner-thoi-trang-dang-cap.jpg"></div>
+		<div class="slide"><img src="img/banner-thoi-trang-nam-don-gian.jpg"></div>
+	</div>
+	<div class="col-5">
+		<ul><img src="img/bannermuahe.jfif" style="margin-top:-30px;margin-left: -50px;"></ul>
+		<ul><h3>TIN THỜI TRANG</h3>
+         <a href="#" style="margin-top:-25px;"> •••   "Biến hóa" thành cô nàng phá cách cùng trang phục Jeans</a><br>
+         <a href="#">•••   Điệu đà với đầm xòe cổ yếm hiện đại</a><br>
+         <a href="">•••   Những bài tập nhẹ nhàng cho đầu tuần hứng khởi</a>
+		</ul>
+		</div>
+</aside>
+<section>
+	<div class="section-header"> 
+	 <div class="col-2" style="margin-top: -10px; width: 95%;margin-left: 2.5%;background-color: #e0ebeb;color: #f60">
+	   Phụ Kiện
+	 </div>
+</section>
+<article style="width:95%;margin-left: 2.5%">
+    <div class="col-12">
+        <div class="sanpham">
+            <div class="anh">
+                <a href="#"><img src="img/tuisach93.jpg" alt="#" style="width:160px;height:170px;margin-top: 25px"></a>
+            </div>    
+            <div class="AddToCart">
+           <span class="title" >Túi sách Cao cấp T93</span><br>
+                <span class="gia">969.000VND</span>
+            </div>
+    </div>
+    <div class="sanpham">
+            <div class="anh">
+                <a href="#"><img src="img/tuisachcam.jpg" alt="#" style="width:160px;height:170px;margin-top: 25px"></a>
+            </div>    
+            <div class="AddToCart">
+           <span class="title" >Túi sách cao cấp T94</span><br>
+                <span class="gia"> 769.000 VNĐ</span>
+            </div>
+    </div>
+   <div class="sanpham">
+            <div class="anh">
+                <a href="#"><img src="img/tuisacht9.jpg" alt="#" style="width:160px;height:170px;margin-top: 25px"></a>
+            </div>    
+            <div class="AddToCart">
+           <span class="title" >Túi sách cao cấp T55</span><br>
+                <span class="gia">869.000VND</span>
+            </div>
+    </div>
+    <div class="sanpham">
+            <div class="anh">
+                <a href="#"><img src="img/viDai.jpg" alt="#" style="width:160px;height:170px;margin-top: 25px"></a>
+            </div>    
+            <div class="AddToCart">
+           <span class="title" >Ví Dài nam</span><br>
+                <span class="gia">259.000 VND</span>
+            </div>
+    </div>
+    <div class="sanpham">
+            <div class="anh">
+                <a href="#"><img src="img/daylungthoitrang.jpg" alt="#" style="width:160px;height:170px;margin-top: 25px"></a>
+            </div>    
+            <div class="AddToCart">
+           <span class="title" >Dây lưng thời trang</span><br>
+                <span class="gia">79.000VND</span>
+            </div>
+            
+                
+    </div>
+
+</article>
+<!--begin footer-->
+<footer id="footer1" class="row"> 
+<div class="col-12" style="background-color:violet">        
+ <ul>
+<a href="#" title="" style="font-family:fantasy;font-size: 15pt;"><i class="fab fa-battle-net" ></i>Hỏi đáp</a><br>
+<a href="#">Giới thiệu công ty(DĐG)</a><br>
+<a href="#">Hệ thống cửa hàng</a><br>
+<a href="#">Tuyển dụng</a><br>
+<a href="#">Chính sách bảo mật</a>
+</ul>
+<ul>
+
+<a href="#" title="" style="font-family:fantasy;font-size: 15pt;"><i class="fas fa-box-open" style=""></i>Đổi trả hàng</a><br>
+<a href="#">Chính sách bảo hành</a><br>
+<a href="#">Chính sách đổi trả sản phẩm</a><br>
+<a href="#">Hỏi đáp mua hàng online</a><br>
+<a href="#">Phương thức thanh toán</a>
+</ul>
+<ul>
+<a href="#" title="" style="font-family:fantasy;font-size: 15pt;"><i class="fas fa-truck-moving" style=""></i> Giao hàng toàn quốc</a><br>
+<a href="#">Gọi mua hàng miễn phí:1900.98198</a><br>
+<a href="#">Gọi bảo hành và khiếu nại:1800.7652</a><br>
+<a href="#">Gọi hợp tác kinh doanh:1800.3003</a>
+</ul>
+<section id="giohang" onclick="giohang_click()">
+<i  class="fas fa-cart-plus"></i>
+<div id="number_product">0</div>
+</section>
+<a href="tel:18006501" style="width:140px;position: fixed;background: #fff;padding: 2px 5px;right: 10px;bottom: 50px;border-radius: 10px;z-index: 999;box-shadow: 0 0px 5px 0 rgba(90, 90, 90, 0.5)">
+    <i class="fa fa-phone" style="
+    width: 24px;
+    height: 24px;
+    background: #ff6600;
+    display: inline-block;
+    float: left;
+    margin-top: 12px;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 16px;"></i>
+        <span style="color: #666;">Gọi mua hàng</span>
+        <strong style="display: block;color: #333;font-size: 16px;">18006501</strong>
+</a></div>
+<div class="footer_text"><p>© 2017 - CÔNG TY CỔ PHẦN THỜI TRANG FLAT - VPGD: 37 Trung Kính - Trung Hòa - Cầu Giấy - Hà Nội<br>
+Điện thoại: (024) 2 0219 555 - Hotline: 0973 285 886<br>
+Email: FLATboutique.vn@gmail.com - Nơi cấp: Sở kế hoạch và đầu tư thành phố Hà Nội</p></div>
+</div>        
+</div>
+</footer>
+<!--end footer-->
+
+<script src="html5.js"></script>
+
+</body>
+</html>

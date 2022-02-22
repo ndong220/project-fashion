@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="homedd.css">
+    <title>Chi tiết sản phẩm</title>
+    <script src="jquery.js"></script>
+</head>
+<body>
+    <header id="p_header" class="row">
+	<div class="col-4" style="background-color: white;">
+		<img src="img/flatshop.png" style="width: 430px;height: 120px;">
+	</div>
+	<div class="col-8" style="background-color: white">
+        <div class="search" style="margin-left:-13%;">
+	<input type="search" name="" id="txtsearch" placeholder="Bạn muốn tìm...." style="height: 5%">
+	<button type="submit"><i class="fa fa-search"></i> Tìm kiếm</button>
+	
+		<select id="box" class="select" style="height:5%;">
+                      <option value="hn" selected="selected">Hà Nội</option>
+                      <option value="hcm">Hồ Chí Minh</option>
+                      <option value="ag">An Giang</option>
+                      <option value="dn">Đà Nẵng</option>
+                      <option value="ct">Cần Thơ</option>
+                      <option value="tn">Thái Nguyên</option>
+                      <option value="hd">Hải Dương</option>
+                      <option value="hp">Hải Phòng</option>
+                      <option value="kg">Kiên Giang</option>
+                    </select>             
+	
+		<a href="#" title="19008198"><i class="fas fa-phone" style="margin-left:25px;">  Chăm sóc khách hàng</i></a>
+                
+                <a href="#" title=""><i class="fab fa-facebook-square" style="margin-left: 25px; margin-top: 30px">Fanpage</i></a>
+                
+</div>
+<div id="div1"><a href="dangky.html">Đăng Ký</a></div>
+<div id="div2"><a href="dangnhap.html">Đăng Nhập</a></div>
+<div id="div3"><a href="/admin quantri/admin.html"><i class="fas fa-user"></i>Admin</a></div>
+</div>
+    </header>
+    <nav id="p_menu" class="row">
+	<div class="col-12" style="height: 60px">
+		<ul>
+		 	<li><a href="Homedd.html">Trang Chủ</a>
+		 	</li>
+		 	<li><a href="#">Thời Trang Nam</a>
+		 	<ul class="submenu">
+            	<li><a href="/Aophong.html">Áo Phông</a></li>
+            	<li><a href="#">Áo Sơ Mi</a></li>
+            	<li><a href="#">Quần</a></li>
+            </ul></li>
+		 	<li><a href="#"> Thời Trang nữ</a>
+		 	<ul class="submenu">
+                <li><a href="/Dannu.html">Đầm</a></li>
+            	<li><a href="#">Áo</a></li>
+            	<li><a href="#">Váy</a></li>
+            </ul></li>
+		 	<li><a href="#"> Phụ kiện</a>
+		 	<ul class="submenu">
+            	<li><a href="#">Dây Da</a></li>
+            	<li><a href="#">Ví</a></li>
+            	<li><a href="#">Túi Sách</a></li>
+            </ul></li>
+		 	<li><a href="#">Giới Thiệu</a>
+		 	<ul class="submenu">
+            	<li><a href="#">Về Chúng Tôi</a></li>
+            </ul></li>
+            <li><a href="#">Liên Hệ</a>
+                <ul class="submenu">
+                   <li><a href="#">Mua Hàng</a></li>
+                   <li><a href="#">Quảng Cáo</a></li>
+               </ul></li>
+
+		 </ul>
+    </div>
+    </nav>
+    <nav id="phieumua" class="row">
+        <div class="col-8" style="margin-top: 180px;">
+            <form id="myform">
+        <div class="formmua">
+        <h2>Phiếu mua hàng</h2>
+        <ul>
+            
+        </ul>
+    <ul>Họ tên :<input  type="text" placeholder="Nhập họ và tên....." id="ht" style="width: 350px;
+        height: 20px;
+        border-radius: 5px;
+        border:1px solid grey;
+        padding-left: 20px; ">
+        
+        
+        
+         </ul>
+        <ul> Địa chỉ :<input type="text" placeholder="Nhập địa chỉ nhận hàng...." id="dc" style="width: 350px;
+        height: 30px;
+        border-radius: 5px;
+        border:1px solid grey;
+        padding-left: 20px; ">
+        
+        
+        </ul>
+    <ul> SĐT :<input type="numberphone" placeholder="Số điện thoại liên lạc...." id="sdt" style="width: 350px;
+        height: 30px;
+        border-radius: 5px;
+        border:1px solid grey;
+        padding-left: 20px;">
+       
+        
+    </ul>
+    <ul>Email :<input type="Email" placeholder="Email...." id="email" style="width: 350px;
+        height: 30px;
+        border-radius: 5px;
+        border:1px solid grey;
+        padding-left: 20px;">
+        
+        
+    </ul>
+    Nội dung ghi chú :<ul>
+        <input type="LogNote" placeholder="Nội dung ghi chú" id="" style="width: 350px;
+        height: 55px;
+        text-align: center;
+        border-radius: 5px;
+        border:1px solid grey;
+        padding-left: 20px;">
+    </ul>
+        <ul>
+        <input type="button" value="Xác nhận mua hàng" onclick="checkForm()" style="width: 350px;
+        height: 30px;
+        border-radius: 5px;
+        border:1px solid grey;
+        padding-left: 20px;"></ul>
+        <ul>
+        <input type="button" value="Đóng" onclick="hide()" style="width: 350px;
+        height: 30px;
+        border-radius: 5px;
+        border:1px solid grey;
+        padding-left: 20px;"></ul>
+         </div>
+    </form>
+        </div>
+    </nav>
+    <script src="html5.js"></script>
+    <aside id="p_slide" class="row">
+        <div class="col-5">
+            <div class="img-container">
+                <img src="./img/damdo.jpg" style="height:400px" id="imgBox">
+            </div>
+        </div>
+    
+        <div class="col-4" style="height: 135%">
+            <div class="gia">
+                <a style="font-size: 24pt">Đầm đỏ đính ngọc</a>
+                <a style="font-size: 24pt;color: red">1.600.900 VND</a>
+                
+            </div>
+            <div>
+                <ul>
+      SIZE:&nbsp&nbsp&nbsp&nbsp&nbsp
+       
+         <input type="radio" name="mausac" id="an">M &nbsp&nbsp&nbsp&nbsp&nbsp
+            <input type="radio" name="mausac" id="hien">L &nbsp&nbsp&nbsp&nbsp&nbsp
+             <input type="radio" name="mausac" id="hien">XL &nbsp&nbsp&nbsp&nbsp&nbsp
+           
+        
+    </ul>
+                    <ul>
+                      <a href="tel:19008198"><button style="width:90%;height: 46px;margin-top: 5%; "><span style="color: #666;">Gọi mua hàng</span>
+                    <strong style="display: block;color: #333;font-size: 16px;">19008198</strong><br></button></a>
+                    </ul>
+                    <ul>
+                    <button onclick="Show()" style="width:90%;height: 46px;margin-top: 5%;" ><a style="font-family: sans-serif;font-weight: bold;font-size: 12pt"> MUA NGAY</a><br>Miễn phí giao hàng tận nơi</button></ul>
+                    <ul>
+                    <button style="width:90%;height: 46px;margin-top: 5%;"><a style="font-family: sans-serif;font-weight: bold;font-size: 12pt"> TRẢ GÓP LÃI SUẤT THẤP</a><br>Tư vấn qua điện thoại</button>
+                    </ul>
+    
+    </div>
+    </div>
+    <div class="col-3" style="height:135%">
+        <div class="detail-bh">Chế độ ưu đãi hấp dẫn</div>
+        <div class="ct-bh" style="margin-top: 5%">
+            <ul>
+                <li><i class="fas fa-sync-alt"></i>Sale đến 30%</li>
+                <li><i class="fas fa-check-circle"></i>Hiện đại-Trẻ Trung</li>
+                <li><i class="fas fa-cog"></i> Quý Phái-Sang Trọng</li>
+            </ul>
+        </div>
+        <div class="img-dcare" style="margin-top: 5%;">
+            <img src="img/canhbao.jpg" style="width:80%;margin-left: 10%">
+        </div>
+        <div style="margin-top: 5%">
+            <a>Free Ship Nội Thành &nbsp&nbsp&nbsp&nbsp&nbsp Giao trong ngày</a>
+        </div>
+        <div class="ct-bh1">
+            Thông tin sản phẩm mới
+        </div>
+        <div class="seedetail-care" style="margin-top: 3%">
+            <a href="#"><ul>Xem chi tiết...</ul></a>
+        </div>
+    </div>
+    </aside>
+    
+    
+    <footer id="footer1" class="row"> 
+            <div class="col-12" style="background-color:violet">        
+             <ul>
+    <a href="#" title="" style="font-family:fantasy;font-size: 15pt;"><i class="fab fa-battle-net" ></i>Hỏi đáp</a><br>
+    <a href="#">Giới thiệu công ty(FLAT)</a><br>
+    <a href="#">Hệ thống cửa hàng</a><br>
+    <a href="#">Tuyển dụng</a><br>
+    <a href="#">Chính sách bảo mật</a>
+    </ul>
+    <ul>
+    
+    <a href="#" title="" style="font-family:fantasy;font-size: 15pt;"><i class="fas fa-box-open" style=""></i>Đổi trả hàng</a><br>
+        <a href="#">Chính sách bảo hành</a><br>
+        <a href="#">Chính sách đổi trả sản phẩm</a><br>
+        <a href="#">Hỏi đáp mua hàng online</a><br>
+        <a href="#">Phương thức thanh toán</a>
+    </ul>
+    <ul>
+    <a href="#" title="" style="font-family:fantasy;font-size: 15pt;"><i class="fas fa-truck-moving" style=""></i> Giao hàng toàn quốc</a><br>
+    <a href="#">Gọi mua hàng miễn phí:1900.98198</a><br>
+    <a href="#">Gọi đổi trả và khiếu nại:1800.7652</a><br>
+    <a href="#">Gọi hợp tác kinh doanh:1800.3003</a>
+    </ul>
+            <a href="tel:18006501" style="width:140px;position: fixed;background: #fff;padding: 2px 5px;right: 10px;bottom: 50px;border-radius: 10px;z-index: 999;box-shadow: 0 0px 5px 0 rgba(90, 90, 90, 0.5)">
+                <i class="fa fa-phone" style="
+                width: 24px;
+                height: 24px;
+                background: #ff6600;
+                display: inline-block;
+                float: left;
+                margin-top: 12px;
+                color: #fff;
+                border-radius: 50%;
+                margin-right: 5px;
+                text-align: center;
+                line-height: 24px;
+                font-size: 16px;"></i>
+                    <span style="color: #666;">Gọi mua hàng</span>
+                    <strong style="display: block;color: #333;font-size: 16px;">19008198</strong>
+            </a></div>
+      <div class="footer_text"><p>© 2017 - C  <div class="footer_text"><p>© 2017 - CÔNG TY CỔ PHẦN THỜI TRANG FLAT - VPGD: 37 Trung Kính - Trung Hòa - Cầu Giấy - Hà Nội<br>
+        <br>Điện thoại: (024) 2 0219 555 - Hotline: 0973 285 886<br>
+        Email: FLATboutique.vn@gmail.com - Nơi cấp: Sở kế hoạch và đầu tư thành phố Hà Nội</p></div>
+            </div>        
+        </div>
+    </footer>
+    <script >
+        function myFunction(smallImg){
+            var fullImg =document.getElementById("imgBox");
+            fullImg.src=smallImg.src;
+        }
+        function Show(){
+            
+            if (document.getElementById('myform').style.display==="block") {
+                document.getElementById('myform').style.display="none";
+          
+            }else{
+                document.getElementById('myform').style.display="block";
+               
+            }
+        }
+    
+            function checkForm(){
+                var ht=document.getElementById('ht').value;
+                var dc=document.getElementById('dc').value;
+                var sdt=document.getElementById('sdt').value;
+                var email=document.getElementById('email').value;
+                
+    
+                if (ht===""||dc===""||sdt===""||email===""||isNaN(sdt)) 
+                {
+                    alert("Bạn nhập thông tin chưa chính xác!");
+                }
+                else
+                alert("bạn đã đặt hàng thành công")
+                
+            } 
+            function hide(){
+                document.getElementById("myform").style.display="none";
+            }
+    </script>
+    </body>
+    </html>
